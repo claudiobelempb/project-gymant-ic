@@ -1,0 +1,11 @@
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Break Points *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$break-points: (
+  "break-point-small": 400px,
+  "break-point-medium": 600px,
+  "break-point-tablet": 800px,
+  "break-point-desktop": 1300px,
+);
+
+@function break-point($break-point-limit) {
+  @return map-get($break-points, $break-point-limit);
+}

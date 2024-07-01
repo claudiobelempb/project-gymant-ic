@@ -1,0 +1,88 @@
+:root {
+  font-size: 62.5%;
+}
+
+// 16px 10px
+// 100 x Typography
+
+//     fs     = Font Size
+//     fw     = Font Weight
+
+//     -------------------- Sizing Nature
+//     d      = dynamic
+//     st     = static
+
+//     -------------------- Sizing
+//     xl      = extra large
+//     l      = large
+//     m      = medium
+//     s      = small
+//     xs     = extra small
+//     c      = customized
+
+$fs-d: (
+  "lc": calc(3rem + 3.5vw),
+  "l": calc(2rem + 3vw),
+  "mc": calc(2rem + 2.5vw),
+  "m": calc(1rem + 2vw),
+  "sc": calc(1rem + 1.5vw),
+  "s": calc(1rem + 1vw),
+);
+
+@function font-size-d($f-s-d) {
+  @return map-get($fs-d, $f-s-d);
+}
+
+$fs-st: (
+  "xl": 4rem,
+  "lc": 3.5rem,
+  "l": 3rem,
+  "mc": 2.5rem,
+  "m": 2rem,
+  "sc": 1.5rem,
+  "s": 1rem,
+);
+
+@function font-size-st($f-s-st) {
+  @return map-get($fs-st, $f-s-st);
+}
+
+$fw: (
+  "100": 100,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "900": 900,
+);
+
+@function font-weight($f-w) {
+  @return map-get($fw, $f-w);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Weights *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-weights: (
+  "font-weight-thin": 100,
+  "font-weight-light": 300,
+  "font-weight-regular": 400,
+  "font-weight-medium": 500,
+  "font-weight-bold": 700,
+  "font-weight-black": 900,
+);
+
+@function font-weight($font-weight-style) {
+  @return map-get($font-weights, $font-weight-style);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Sizes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-sizes: (
+  "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-xlarge": calc(2.5rem + 5vw),
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
