@@ -19,35 +19,47 @@
 //     s      = small
 //     xs     = extra small
 //     c      = customized
+// m1 = 37.1875px
+// s1 = 48.4px
+// s2 = 61.2px
+// m3 = 66.2px
+// l2 = 84px
+// l1 = 96.8px
+// l4 = 119.6px
+// m2 = 143px
+// l3 = 153px
 
-$fs-d: (
-  "lc": calc(3rem + 3.5vw),
-  "l": calc(2rem + 3vw),
-  "mc": calc(2rem + 2.5vw),
-  "m": calc(1rem + 2vw),
-  "sc": calc(1rem + 1.5vw),
-  "s": calc(1rem + 1vw),
+$fdinamic: (
+  "s1": calc(1.2rem + 0.5vw),
+  "s2": calc(1rem + 1.5vw),
+  "m1": calc(1rem + 2vw),
+  "m2": calc(1.5rem + 2vw),
+  "m3": calc(2rem + 2.5vw),
+  "l1": calc(2rem + 3vw),
+  "l2": calc(1.5rem + 5vw),
+  "l3": calc(3rem + 3.5vw),
+  "l4": calc(2.5rem + 5vw),
 );
 
-@function font-size-d($f-s-d) {
-  @return map-get($fs-d, $f-s-d);
+@function fd($fd) {
+  @return map-get($fdinamic, $fd);
 }
 
-$fs-st: (
-  "xl": 4rem,
-  "lc": 3.5rem,
-  "l": 3rem,
-  "mc": 2.5rem,
-  "m": 2rem,
-  "sc": 1.5rem,
-  "s": 1rem,
+$fstatic: (
+  "s1": 1rem,
+  "s2": 1.5rem,
+  "m1": 2rem,
+  "m2": 2.5rem,
+  "l1": 3rem,
+  "l2": 3.5rem,
+  "l3": 4rem,
 );
 
-@function font-size-st($f-s-st) {
-  @return map-get($fs-st, $f-s-st);
+@function fs($fs) {
+  @return map-get($fstatic, $fs);
 }
 
-$fw: (
+$fweight: (
   "100": 100,
   "300": 300,
   "400": 400,
@@ -56,33 +68,6 @@ $fw: (
   "900": 900,
 );
 
-@function font-weight($f-w) {
-  @return map-get($fw, $f-w);
-}
-
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Weights *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-$font-weights: (
-  "font-weight-thin": 100,
-  "font-weight-light": 300,
-  "font-weight-regular": 400,
-  "font-weight-medium": 500,
-  "font-weight-bold": 700,
-  "font-weight-black": 900,
-);
-
-@function font-weight($font-weight-style) {
-  @return map-get($font-weights, $font-weight-style);
-}
-
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Sizes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-$font-sizes: (
-  "font-size-small": calc(1.2rem + 0.5vw),
-  "font-size-regular": calc(1.5rem + 1vw),
-  "font-size-medium": calc(1.5rem + 2vw),
-  "font-size-large": calc(1.5rem + 5vw),
-  "font-size-xlarge": calc(2.5rem + 5vw),
-);
-
-@function font-size($font-size-style) {
-  @return map-get($font-sizes, $font-size-style);
+@function fw($w) {
+  @return map-get($fweight, $w);
 }

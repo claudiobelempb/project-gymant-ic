@@ -5,23 +5,22 @@ body {
   line-height: 1.5;
 }
 
-/*a,
-input[type="submit"] {
-  text-decoration: none;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
-}*/
-
 a:link,
 a:visited {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
   color: var(--color-quinary);
-  font-weight: font-weight(font-weight-light);
+  font-weight: fw('100');
   letter-spacing: 0.2rem;
-  font-size: font-size(font-size-small);
+  font-size: fsd('lc');
 }
 
-i {
+li {
+  list-style: none;
+}
+
+svg {
   color: var(--color-primary);
   font-size: font-size(font-size-medium);
 }

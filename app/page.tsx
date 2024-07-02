@@ -6,7 +6,8 @@ import ImgLogo from '../public/assets/images/logo/logo.svg';
 export default function Home() {
   return (
     <main className='container'>
-      <header className='header overall-layout'>
+      <header className='header overall-layout space'>
+        <h1 className='sub-title'>Title</h1>
         <nav className='header__nav'>
           <Link href='/' className='header__nav--logo'>
             <Image src={ImgLogo} alt='Logo' />
