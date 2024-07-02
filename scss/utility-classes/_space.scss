@@ -1,0 +1,5 @@
+@use "../general-styles/space" as space;
+
+.space {
+  padding: space.sdy(m2) space.sdx(m2);
+}

@@ -1,0 +1,13 @@
+//12.5 x 10 x 100 = 1500px
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(6,
+      [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-rows: min-content 100vh repeat(9, min-content);
+  justify-content: center;
+}
+
+.overall-layout {
+  grid-column: container-start / container-end;
+}

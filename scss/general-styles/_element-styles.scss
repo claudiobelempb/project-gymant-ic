@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: "Roboto", monospace;
+  line-height: 1.5;
+}
+
+a:link,
+a:visited {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: var(--color-quinary);
+  font-weight: fw('100');
+  letter-spacing: 0.2rem;
+  font-size: fsd('lc');
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  color: var(--color-primary);
+  font-size: font-size(font-size-medium);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0.5rem;
+}

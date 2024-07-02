@@ -1,0 +1,9 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+.title {
+  font-size: type.fd(l1);
+  font-weight: type.fw(900);
+  color: clrs.colors(red-500);
+  text-align: center;
+}

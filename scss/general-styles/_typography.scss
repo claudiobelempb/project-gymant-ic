@@ -1,0 +1,73 @@
+:root {
+  font-size: 62.5%;
+}
+
+// 16px 10px
+// 100 x Typography
+
+//     fs     = Font Size
+//     fw     = Font Weight
+
+//     -------------------- Sizing Nature
+//     d      = dynamic
+//     st     = static
+
+//     -------------------- Sizing
+//     xl      = extra large
+//     l      = large
+//     m      = medium
+//     s      = small
+//     xs     = extra small
+//     c      = customized
+// m1 = 37.1875px
+// s1 = 48.4px
+// s2 = 61.2px
+// m3 = 66.2px
+// l2 = 84px
+// l1 = 96.8px
+// l4 = 119.6px
+// m2 = 143px
+// l3 = 153px
+
+$fdinamic: (
+  "s1": calc(1.2rem + 0.5vw),
+  "s2": calc(1rem + 1.5vw),
+  "m1": calc(1rem + 2vw),
+  "m2": calc(1.5rem + 2vw),
+  "m3": calc(2rem + 2.5vw),
+  "l1": calc(2rem + 3vw),
+  "l2": calc(1.5rem + 5vw),
+  "l3": calc(3rem + 3.5vw),
+  "l4": calc(2.5rem + 5vw),
+);
+
+@function fd($fd) {
+  @return map-get($fdinamic, $fd);
+}
+
+$fstatic: (
+  "s1": 1rem,
+  "s2": 1.5rem,
+  "m1": 2rem,
+  "m2": 2.5rem,
+  "l1": 3rem,
+  "l2": 3.5rem,
+  "l3": 4rem,
+);
+
+@function fs($fs) {
+  @return map-get($fstatic, $fs);
+}
+
+$fweight: (
+  "100": 100,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "900": 900,
+);
+
+@function fw($w) {
+  @return map-get($fweight, $w);
+}

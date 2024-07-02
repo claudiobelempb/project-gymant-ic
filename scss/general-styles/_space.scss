@@ -1,0 +1,70 @@
+// ----------*----------  space
+
+//       space    = Padding
+
+//       -------------------- Sizing Nature
+//       d      = dynamic
+//       st     = static
+
+//       -------------------- Sizing
+//       l      = large
+//       m      = medium
+//       s      = small
+//       xs     = extra small
+//       c      = customized
+
+// -------------------- Orientation
+//       x      = vertical   (top & bottom)
+$space-d-x: (
+  "s1": calc(1rem + 1vh),
+  "s2": calc(1rem + 4vh),
+  "m1": calc(1rem + 6vh),
+  "m2": calc(1rem + 8vh),
+  "l1": calc(2rem + 12vh),
+);
+
+@function sdx($space-dx) {
+  @return map-get($space-d-x, $space-dx);
+}
+
+// -------------------- Orientation
+//       y      = horizontal (right & left)
+$space-d-y: (
+  "s1": calc(1rem + 1vw),
+  "s2": calc(1rem + 2vw),
+  "s3": calc(1rem + 4vw),
+  "m1": calc(1rem + 6vw),
+  "m2": calc(1rem + 8vw),
+  "l1": calc(2rem + 12vw),
+);
+
+@function sdy($space-dy) {
+  @return map-get($space-d-y, $space-dy);
+}
+
+// -------------------- Orientation
+//       x      = vertical   (top & bottom)
+$space-st-x: (
+  "s1": 1rem,
+  "m1": 1.5rem,
+  "l1": 2rem,
+  "l2": 3rem,
+  "l3": 4rem,
+);
+
+@function sx($space-stx) {
+  @return map-get($space-st-x, $space-stx);
+}
+
+// -------------------- Orientation
+//       y      = horizontal (right & left)
+$space-st-y: (
+  "s1": 1.5rem,
+  "s2": 2rem,
+  "m1": 2.5rem,
+  "l1": 3rem,
+);
+
+@function sy($space-sty) {
+  @return map-get($space-st-y, $space-sty);
+}
