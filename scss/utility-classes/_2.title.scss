@@ -1,0 +1,53 @@
+@use "../general-styles/colors" as c;
+@use "../general-styles/typography" as f;
+
+.title {
+  font-size: f.fd('l1');
+  font-weight: f.fw('900');
+  color: var(--red-500);
+  text-align: center;
+}
+
+.sub-title {
+  font-size: f.fs('m1');
+  font-weight: f.fw('300');
+  transition: all 0.25s ease-in-out;
+  color: var(--red-500);
+
+  @media (hover) {
+    & {
+      color: var(--gray-100);
+    }
+
+    &:hover {
+      color: var(--red-500);
+    }
+  }
+}
+
+.mini-title {
+  font-size: f.fs('s1');
+  color: var(--violet-500);
+
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 0.2rem;
+    width: 2rem;
+    transform: translateY(-50%);
+    background-color: var(--violet-500);
+  }
+
+  &::before {
+    left: -60%;
+  }
+
+  &::after {
+    right: -60%;
+  }
+}

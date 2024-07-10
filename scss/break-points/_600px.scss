@@ -1,0 +1,6 @@
+@use "../general-styles/colors" as c;
+@media screen and (max-width: 600px) {
+  .header {
+    background-color: var(--violet-500);
+  }
+}

@@ -1,0 +1,10 @@
+@use "../general-styles/colors" as c;
+@use "../general-styles/space" as s;
+@use "../general-styles/typography" as f;
+
+.sec-link,
+input[type="submit"] {
+  color: var(--gray-100);
+  font-size: f.fs('s2');
+  padding: s.sdy(s) s.sx(l);
+}

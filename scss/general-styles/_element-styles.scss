@@ -1,3 +1,6 @@
+@use "../general-styles/typography" as f;
+@use "../general-styles/space" as s;
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
@@ -10,10 +13,10 @@ a:visited {
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  color: var(--color-quinary);
-  font-weight: fw('100');
+  color: var(--gray-100);
+  font-weight: f.fw('100');
   letter-spacing: 0.2rem;
-  font-size: fsd('lc');
+  font-size: f.fd('lc');
 }
 
 li {
@@ -21,8 +24,8 @@ li {
 }
 
 svg {
-  color: var(--color-primary);
-  font-size: font-size(font-size-medium);
+  color: var(--green-500);
+  font-size: f.fs('m1');
 }
 
 img {

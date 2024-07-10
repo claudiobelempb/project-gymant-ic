@@ -1,0 +1,8 @@
+@use '../general-styles/colors' as color;
+
+.showcase {
+  // background-color: color.color('green-600');
+  background-color: var(--green-600);
+  grid-column: container-start / container-end;
+  height: 600px;
+}

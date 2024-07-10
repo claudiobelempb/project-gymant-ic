@@ -1,0 +1,17 @@
+@use "../general-styles/colors" as c;
+
+@media screen and (min-width: 1300px) {
+  .header {
+    &__nav {
+      &--links {
+        &__item {
+
+          a:link,
+          a:visited {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.9;
-  background-color: var(--color-primary);
+  background-color: var(--green-500);
 }
 
 .container {
@@ -29,13 +29,13 @@ li {
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--color-quinary);
+  color: var(--green-500);
   font-weight: font-weight(font-weight-light);
   letter-spacing: 0.2rem;
   font-size: font-size(font-size-small);
 }
 
 i {
-  color: var(--color-primary);
+  color: var(--green-500);
   font-size: font-size(font-size-medium);
 }
