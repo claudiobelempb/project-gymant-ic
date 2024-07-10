@@ -91,7 +91,7 @@ function useFetch<T = unknown>(
         } catch (error) {
           if (cancelRequest.current) return;
 
-          dispatch({ type: RequestType.failure, payload: error.message });
+          // dispatch({ type: RequestType.failure, payload: error.getMessage });
         }
       }
     };
