@@ -9,7 +9,6 @@ import { Toggle } from '../Toggle';
 export const HeaderTop: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useDarkMode();
-  console.log('darkMode => ', darkMode);
   const handleOpen = () => {
     console.log('Open');
     setOpen(!open);

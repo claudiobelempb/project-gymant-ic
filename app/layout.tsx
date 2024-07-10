@@ -20,8 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [darkMode, setDarkMode] = useDarkMode();
-  console.log('Layout =>', darkMode);
+  const [darkMode] = useDarkMode();
   return (
     <html lang='en'>
       <body data-theme={darkMode ? 'darkMode' : 'light'}>{children}</body>

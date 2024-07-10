@@ -1,3 +1,4 @@
+'use client';
 import { useCallback, useState } from 'react';
 // Hook
 // Parameter is the boolean, with default "false" value

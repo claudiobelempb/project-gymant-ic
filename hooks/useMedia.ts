@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 
 const useMedia = <T>(queries: string[], values: T[], defaultValue: T) => {
