@@ -1,6 +1,7 @@
 'use client';
-import { HeaderTop } from '@/components/HeaderTop';
+
 import { ShowCase } from '@/components/ShowCase';
+import { HeaderTop } from '../components/HeaderTop';
 
 export default function Home() {
   return (

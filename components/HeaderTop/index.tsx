@@ -1,16 +1,17 @@
 'use client';
-import useDarkMode from '@/hooks/useDarkMode';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import ImgLogo from '../../public/assets/images/logo/logo.svg';
+
+// import useDarkMode from '@/hooks/useDarkMode';
 import { Toggle } from '../Toggle';
 
 export const HeaderTop: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const [darkMode, setDarkMode] = useDarkMode();
+  // const [darkMode, setDarkMode] = useDarkMode();
   const handleOpen = () => {
-    console.log('Open');
     setOpen(!open);
   };
 
@@ -27,7 +28,13 @@ export const HeaderTop: React.FC = () => {
 
       <nav className='header__nav'>
         <Link href='/' className='header__nav--logo'>
-          <Image src={ImgLogo} priority={false} alt='Logo' loading='lazy' />
+          <Image
+            src={ImgLogo}
+            priority // or priority={true}
+            alt='Logo'
+            width={100}
+            height={100}
+          />
         </Link>
 
         <ul className='header__nav--links'>
@@ -62,7 +69,8 @@ export const HeaderTop: React.FC = () => {
             </Link>
           </li>
 
-          <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
+          {/* <Toggle darkMode={'darkMode'} setDarkMode={'setDarkMode'} /> */}
+          <Toggle />
         </ul>
       </nav>
     </header>

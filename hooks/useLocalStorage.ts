@@ -7,7 +7,7 @@ function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       // Get from local storage by key
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && window.localStorage) {
         const item = window.localStorage.getItem(key);
         // Parse stored json or if none return initialValue
         return item ? JSON.parse(item) : initialValue;
@@ -31,7 +31,7 @@ function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore);
 
       // Save to local storage
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && window.localStorage) {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
