@@ -23,19 +23,22 @@ function useDarkMode() {
   useEffect(
     () => {
       const className = 'dark';
-      const element = window.document.body;
-      const smoothTrans = () => {
-        element.classList.add('transition');
-        window.setTimeout(() => {
-          element.classList.remove('transition');
-        }, 1000);
-      };
-      if (enabled) {
-        smoothTrans();
-        element.setAttribute('data-theme', 'dark');
-      } else {
-        smoothTrans();
-        element.setAttribute('data-theme', 'light');
+      if (typeof window !== 'undefined') {
+        const element = window.document.body;
+        const smoothTrans = () => {
+          element.classList.add('transition');
+          window.setTimeout(() => {
+            element.classList.remove('transition');
+          }, 1000);
+        };
+
+        if (enabled) {
+          smoothTrans();
+          element.setAttribute('data-theme', 'dark');
+        } else {
+          smoothTrans();
+          element.setAttribute('data-theme', 'light');
+        }
       }
     },
     [enabled] // Only re-call effect when value changes

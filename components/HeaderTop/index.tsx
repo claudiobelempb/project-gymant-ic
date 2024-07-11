@@ -27,7 +27,7 @@ export const HeaderTop: React.FC = () => {
 
       <nav className='header__nav'>
         <Link href='/' className='header__nav--logo'>
-          <Image src={ImgLogo} alt='Logo' />
+          <Image src={ImgLogo} priority={false} alt='Logo' loading='lazy' />
         </Link>
 
         <ul className='header__nav--links'>
