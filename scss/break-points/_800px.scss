@@ -108,4 +108,16 @@
     }
   }
 
+  .showcase {
+    &__content {
+      &--title {
+        text-align: left;
+      }
+
+      &--links {
+        justify-content: flex-start;
+      }
+    }
+  }
+
 }

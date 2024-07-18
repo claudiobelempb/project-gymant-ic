@@ -16,7 +16,7 @@ export const HeaderTop: React.FC = () => {
   };
 
   return (
-    <header className={`header overall-layout ${open ? 'open' : ''}`}>
+    <header className={`header content ${open ? 'open' : ''}`}>
       <div onClick={handleOpen} className='header__menu'>
         <div className='header__menu--line'></div>
       </div>
