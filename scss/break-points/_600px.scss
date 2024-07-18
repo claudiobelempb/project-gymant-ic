@@ -1,6 +1,31 @@
 @use "../general-styles/colors" as c;
+@use "../general-styles/typography" as f;
 @media screen and (max-width: 600px) {
-  .header {
-    background-color: var(--violet-500);
+  .container {
+    grid-template-rows: min-content 100vh repeat(9, min-content);
+  }
+
+  .showcase {
+    padding: 4rem;
+
+    &__content {
+      &--title {
+        font-size: f.fd('l4');
+        font-weight: f.fw('400');
+        text-align: left;
+      }
+
+      &--para {
+        font-size: 2rem;
+      }
+
+      &--links {
+
+        a:link,
+        a:visited {
+          font-size: f.fd('s1');
+        }
+      }
+    }
   }
 }

@@ -8,28 +8,26 @@ export default function Home() {
     <>
       <main className='container'>
         <HeaderTop />
-        <section className='showcase overall-layout'>
-          <ShowCase />
-        </section>
-        <section className='motto overall-layout'>
+        <ShowCase />
+        <section className='motto content'>
           <h1>Motto</h1>
         </section>
-        <section className='features overall-layout'>
+        <section className='features content'>
           <h1>Features</h1>
         </section>
-        <section className='trainers overall-layout'>
+        <section className='trainers content'>
           <h1>Trainers</h1>
         </section>
-        <section className='testimonials overall-layout'>
+        <section className='testimonials content'>
           <h1>Testimonials</h1>
         </section>
-        <section className='clients overall-layout'>
+        <section className='clients content'>
           <h1>Clients</h1>
         </section>
-        <section className='register overall-layout'>
+        <section className='register content'>
           <h1>Register</h1>
         </section>
-        <footer className='footer overall-layout'>
+        <footer className='footer content'>
           <h1>Footer</h1>
         </footer>
       </main>

@@ -1,7 +1,21 @@
 @use "../general-styles/colors" as c;
+@use "../general-styles/typography" as f;
 @media screen and (max-width: 500px) {
-  .header {
-    background-color: var(--red-500);
-    ;
+  .header {}
+
+  .showcase {
+    &__content {
+
+
+      &--links {
+        flex-direction: column;
+        align-items: flex-start;
+
+        a:link,
+        a:visited {
+          font-size: f.fd('s1');
+        }
+      }
+    }
   }
 }
