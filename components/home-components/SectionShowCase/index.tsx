@@ -1,4 +1,4 @@
-export const ShowCase: React.FC = () => {
+export const SectionShowCase: React.FC = () => {
   return (
     <section className='showcase content'>
       <div className='showcase__content'>

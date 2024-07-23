@@ -68,3 +68,105 @@ $space-st-y: (
 @function sy($space-sty) {
   @return map-get($space-st-y, $space-sty);
 }
+
+// _mixins.scss
+
+// Cria variáveis de tema dinâmicas com base em um mapa de cores
+$space-dynamic: (
+  "1w": calc(1rem + 1vw),
+  "2w": calc(1rem + 2vw),
+  "3w": calc(1rem + 3vw),
+  "4w": calc(1rem + 4vw),
+  "5w": calc(1rem + 5vw),
+  "6w": calc(1rem + 6vw),
+  "7w": calc(1rem + 7vw),
+  "8w": calc(1rem + 8vw),
+  "12w": calc(2rem + 12vw),
+
+  "1h": calc(1rem + 1vh),
+  "2h": calc(1rem + 2vh),
+  "3h": calc(1rem + 3vh),
+  "4h": calc(1rem + 4vh),
+  "5h": calc(1rem + 5vh),
+  "6h": calc(1rem + 6vh),
+  "7h": calc(1rem + 7vh),
+  "8h": calc(1rem + 8vh),
+  "12h": calc(2rem + 12vh),
+);
+
+// @mixin space-dynamic($dynamic) {
+//   @each $space in $space-dynamic {
+//     $name: nth($space, 1); // Extrai o nome da variável de cor
+//     $value: nth($space, 2); // Extrai o valor da variável de cor
+//     //--color-#{$name}: #{$value}; // Cria uma variável CSS customizada com o nome e valor extraídos
+//     --#{$name}: #{$value};
+//   }
+// }
+
+// Cria classe de background dinâmico com base em um mapa de cores
+// @mixin sdx($dynamic) {
+//   @each $name, $space in $space-dynamic {
+
+//     &.sdx-#{$name},
+//     &>.sdx-#{$name},
+//     .sdx-#{$name} {
+//       padding: $space;
+//     }
+//   }
+// }
+
+// Cria classe de background dinâmico com base em um mapa de cores
+// @mixin sdy($dynamic) {
+//   @each $name, $space in $space-dynamic {
+
+//     &.sdy-#{$name},
+//     &>.sdy-#{$name},
+//     .sdy-#{$name} {
+//       padding: $space;
+//     }
+//   }
+// }
+
+$space-static: (
+  "1r": 1rem,
+  "15r": 1.5rem,
+  "2r": 2rem,
+  "25r": 2.5rem,
+  "3r": 3rem,
+  "35r": 3rem,
+  "4r": 4rem,
+  "45r": 4rem,
+);
+
+// @mixin space-static($static) {
+//   @each $space in $space-static {
+//     $name: nth($space, 1); // Extrai o nome da variável de cor
+//     $value: nth($space, 2); // Extrai o valor da variável de cor
+//     //--color-#{$name}: #{$value}; // Cria uma variável CSS customizada com o nome e valor extraídos
+//     --#{$name}: #{$value};
+//   }
+// }
+
+// Cria classe de cor de texto dinâmica com base em um mapa de cores
+// @mixin ssx($static) {
+//   @each $name, $space in $space-static {
+
+//     &.ssx-#{$name},
+//     &>.ssx-#{$name},
+//     .ssx-#{$name} {
+//       padding: $space;
+//     }
+//   }
+// }
+
+// Cria classe de cor de texto dinâmica com base em um mapa de cores
+// @mixin ssy($static) {
+//   @each $name, $space in $space-static {
+
+//     &.ssy-#{$name},
+//     &>.ssy-#{$name},
+//     .ssy-#{$name} {
+//       padding: $space;
+//     }
+//   }
+// }

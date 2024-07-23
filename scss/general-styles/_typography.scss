@@ -67,3 +67,53 @@ $fweight: (
 @function fw($w) {
   @return map-get($fweight, $w);
 }
+
+$font-dinamic-variables: (
+  "12r-05w": calc(1.2rem + 0.5vw),
+  "15r-1w": calc(1.5rem + 1vw),
+  "1r-2w": calc(1rem + 2vw),
+  "15r-2": calc(1.5rem + 2vw),
+  "2r-25w": calc(2rem + 2.5vw),
+  "2r-3w": calc(2rem + 3vw),
+  "15r-5w": calc(1.5rem + 5vw),
+  "3r-35w": calc(3rem + 3.5vw),
+  "25r-5w": calc(2.5rem + 5vw),
+);
+
+// @mixin font-dynamic($dynamic) {
+//   @each $dynamic in $font-dinamic-variables {
+//     $name: nth($dynamic, 1); // Extrai o nome da variável de cor
+//     $value: nth($dynamic, 2); // Extrai o valor da variável de cor
+//     //--color-#{$name}: #{$value}; // Cria uma variável CSS customizada com o nome e valor extraídos
+//     --#{$name}: #{$value};
+//   }
+// }
+
+$font-static-variables: (
+  "1r": 1rem,
+  "15r": 1.5rem,
+  "2r": 2rem,
+  "25r": 2.5rem,
+  "3": 3rem,
+  "35r": 3.5rem,
+  "4r": 4rem,
+  "45r": 4.5rem,
+);
+
+// @mixin font-static($static) {
+//   @each $static in $font-static-variables {
+//     $name: nth($static, 1); // Extrai o nome da variável de cor
+//     $value: nth($static, 2); // Extrai o valor da variável de cor
+//     //--color-#{$name}: #{$value}; // Cria uma variável CSS customizada com o nome e valor extraídos
+//     --#{$name}: #{$value};
+//   }
+// }
+
+$font-weight-variables: (
+  "100": 100,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "900": 900,
+);
