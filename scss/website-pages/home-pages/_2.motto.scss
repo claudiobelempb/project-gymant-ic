@@ -1,0 +1,25 @@
+@use '../../general-styles/colors' as c;
+@use '../../general-styles/typography' as f;
+@import '../../utility-classes/6.utilities';
+
+.motto {
+  grid-column: container-start / container-end;
+  background-image: url('/assets/images/motto/motto-bg.jpg');
+  @extend %bg;
+  @extend %sec-padding;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  place-content: center;
+
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 4vh;
+    background-color: var(--blue-600);
+    padding: 2rem;
+  }
+
+}

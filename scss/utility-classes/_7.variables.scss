@@ -1,0 +1,87 @@
+$dynamic-variables: (
+  "1r-1w": calc(1rem + 1vw),
+  "1r-2w": calc(1rem + 2vw),
+  "1r-3w": calc(1rem + 3vw),
+  "1r-4w": calc(1rem + 4vw),
+  "1r-5w": calc(1rem + 5vw),
+  "1r-6w": calc(1rem + 6vw),
+  "1r-7w": calc(1rem + 7vw),
+  "1r-8w": calc(1rem + 8vw),
+  "12r-05w": calc(1.2rem + 0.5vw),
+  "15r-1w": calc(1.5rem + 1vw),
+  "15r-2": calc(1.5rem + 2vw),
+  "15r-5w": calc(1.5rem + 5vw),
+  "2r-25w": calc(2rem + 2.5vw),
+  "2r-3w": calc(2rem + 3vw),
+  "25r-5w": calc(2.5rem + 5vw),
+  "2r-12w": calc(2rem + 12vw),
+  "3r-35w": calc(3rem + 3.5vw),
+
+  "1r-1h": calc(1rem + 1vh),
+  "1r-2h": calc(1rem + 2vh),
+  "1r-3h": calc(1rem + 3vh),
+  "1r-4h": calc(1rem + 4vh),
+  "1r-5h": calc(1rem + 5vh),
+  "1r-6h": calc(1rem + 6vh),
+  "1r-7h": calc(1rem + 7vh),
+  "1r-8h": calc(1rem + 8vh),
+  "2r-12h": calc(2rem + 12vh),
+);
+
+@mixin dynamic-variables($dynamic) {
+  @each $space in $dynamic-variables {
+    $name: nth($space, 1); // Extrai o nome da variável de cor
+    $value: nth($space, 2); // Extrai o valor da variável de cor
+    //--color-#{$name}: #{$value}; // Cria uma variável CSS customizada com o nome e valor extraídos
+    --#{$name}: #{$value};
+  }
+}
+
+$static-variables: (
+  "1r": 1rem,
+  "15r": 1.5rem,
+  "2r": 2rem,
+  "25r": 2.5rem,
+  "3r": 3rem,
+  "35r": 3.5rem,
+  "4r": 4rem,
+  "45r": 4.5rem,
+  "5r": 5rem,
+);
+
+
+@mixin static-variables($static) {
+  @each $static in $static-variables {
+    $name: nth($static, 1);
+    $value: nth($static, 2);
+    --#{$name}: #{$value};
+  }
+}
+
+$weight-variables: (
+  "100": 100,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "700": 700,
+  "900": 900,
+);
+
+@mixin weight-variables($weight) {
+  @each $weight in $weight-variables {
+    $name: nth($weight, 1);
+    $value: nth($weight, 2);
+    --#{$name}: #{$value};
+  }
+}
+
+// _space.scss
+// Inclui as variáveis de dynamic
+:root {
+  @include dynamic-variables($dynamic-variables);
+  // Inclui as variáveis de static
+  @include static-variables($static-variables);
+  // @include font-static($static-variables);
+  @include weight-variables($weight-variables);
+  // @include space-static($static-variables);
+}
