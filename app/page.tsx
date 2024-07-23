@@ -1,5 +1,6 @@
 'use client';
 
+import SectionFeatures from '@/components/home-components/SectionFeatures';
 import SectionMotto from '@/components/home-components/SectionMotto';
 import { SectionShowCase } from '@/components/home-components/SectionShowCase';
 import { HeaderTop } from '../components/HeaderTop';
@@ -11,9 +12,7 @@ export default function Home() {
         <HeaderTop />
         <SectionShowCase />
         <SectionMotto />
-        <section className='features content'>
-          <h1>Features</h1>
-        </section>
+        <SectionFeatures />
         <section className='trainers content'>
           <h1>Trainers</h1>
         </section>

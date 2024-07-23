@@ -1,0 +1,6 @@
+.features {
+  background-color: var(--gray-100);
+  grid-column: container-start / container-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
